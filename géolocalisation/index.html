@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Maps Geolocation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Exemple de géolocalisation Google Maps</h1>
+    <input id="search-input" type="text" placeholder="Search for a place" />
+    <div class="Geolocation">
+      <span class="lat">Latitude : </span>
+      <p id="latitude"></p>
+      <span class="lng">Longitude : </span>
+      <p id="longitude"></p>
+    </div>
+
+    <div id="map"></div>
+    <!-- Charger le script Google Maps de manière asynchrone -->
+    <script src="index.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH896IIPqi5Lw87LKn2lSu1epermMaTI0&loading=async&callback=initMap"
+    ></script>
+  </body>
+</html>

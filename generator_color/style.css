@@ -1,0 +1,32 @@
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s linear;
+  background-image: url(../images/image4.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  z-index: 1;
+}
+#colorBox,
+#colorHex {
+  width: 38%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #000;
+  background: burlywood;
+  border-radius: 20px;
+  margin: 20px;
+  /* box-shadow: 3px 7px 20px #0000004d; */
+  box-shadow: 20px 7px 20px #54324b;
+  cursor: progress;
+}
+h2 {
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}

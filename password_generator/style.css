@@ -1,0 +1,193 @@
+/* Style général pour le corps */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* margin: 0; */
+  background-color: #f0f0f0;
+  background-image: url(../images/image26.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/* Conteneur principal */
+.container {
+  width: 50%;
+  text-align: center;
+  background: pink;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Permet de positionner le bouton de réinitialisation en bas */
+}
+
+/* Style des champs input */
+input {
+  width: 80%;
+  border-radius: 5px;
+}
+/* Style spécifique pour le bouton générer */
+#generateBtn {
+  background: greenyellow;
+  border-radius: 10px;
+  color: black;
+  margin: 17px;
+  width: 83%;
+  height: 8vh;
+  font-family: fantasy;
+  cursor: pointer;
+}
+/* Boutons de type "option" */
+#btnLower,
+#btnUpper,
+#btnNumber,
+#btnRegExp {
+  background: #f0f0f0;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 20px;
+  color: black;
+  cursor: pointer;
+}
+/* Style pour le slider range */
+#rangeInput {
+  width: 50%;
+  margin: 5px 0;
+  background-color: greenyellow;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(238, 103, 191, 0.6);
+}
+/* Poignée du slider pour Webkit */
+#rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 17px;
+  height: 17px;
+  background-color: palevioletred;
+  border-radius: 50%;
+  border: 2px solid darkpink;
+  cursor: pointer;
+}
+/* Poignée du slider pour Firefox */
+#rangeInput::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+  border: 2px solid darkpink;
+  cursor: pointer;
+}
+/* Effet au survol pour la poignée */
+#rangeInput::-webkit-slider-thumb:hover {
+  background-color: darkpink;
+}
+#rangeInput::-moz-range-thumb:hover {
+  background-color: darkpink;
+}
+/* Bouton général */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Effet au survol pour tous les boutons */
+button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+/* Bouton de réinitialisation */
+.btn-rest {
+  position: absolute;
+  top: 80%; /* Positionné en bas du conteneur */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rest {
+  padding: 10px 20px;
+  font-size: 1rem;
+  /* background-color: #f44336; */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  outline-offset: 4px;
+  background: hsl(340deg 100% 32%);
+  will-change: transform;
+  transition: transform 250ms;
+}
+
+/* Effet au survol pour le bouton de réinitialisation */
+.rest:hover {
+  background: hsl(345deg 100% 47%);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+}
+.rest :active {
+  transform: translateY(-2px);
+  background: hsl(345deg 100% 47%);
+}
+/* Media queries */
+
+/* Tablettes (écrans de largeur max 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 70%; /* Réduire la largeur du conteneur */
+    padding: 15px;
+  }
+  input {
+    width: 90%; /* Étendre les champs input */
+  }
+  #generateBtn {
+    width: 90%;
+    font-size: 14px;
+  }
+  #btnLower,
+  #btnUpper,
+  #btnNumber,
+  #btnRegExp {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  .btn-rest {
+    bottom: -50px; /* Ajuster la position pour les petits écrans */
+  }
+}
+
+/* Smartphones (écrans de largeur max 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Presque toute la largeur de l'écran */
+    padding: 10px;
+  }
+  input {
+    width: 100%;
+  }
+  #generateBtn {
+    width: 100%;
+    font-size: 12px;
+    height: auto;
+    padding: 10px;
+  }
+  #btnLower,
+  #btnUpper,
+  #btnNumber,
+  #btnRegExp {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  .btn-rest {
+    bottom: -40px;
+  }
+}

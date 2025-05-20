@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listes Pokemon API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="pokemon-container">
+      <div id="pokemon-card">
+        <h1 class="pokemon-title">
+          <img src="img/Pokémon_logo.png" alt="Pokemon Logo" />
+        </h1>
+        <div class="searh">
+          <input
+            type="text"
+            placeholder="Entrez le nom d'un Pokémon"
+            id="searchInput"
+          />
+          <button id="resetButton">Reset</button>
+        </div>
+
+        <div id="pokemon-list"></div>
+        <img id="pokemon-img" alt="" />
+        <div id="pokemon-number"></div>
+        <div id="pokemon-name"></div>
+      </div>
+    </div>
+    <script src="./allPokemon.js"></script>
+  </body>
+</html>

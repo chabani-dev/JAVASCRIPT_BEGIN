@@ -1,0 +1,172 @@
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  cursor: crosshair;
+  user-select: none;
+}
+
+span {
+  position: absolute;
+  background: orange;
+  border-radius: 300px;
+  animation: animColor 5s forwards linear;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@keyframes animColor {
+  100% {
+    filter: hue-rotate(720deg);
+    top: -500px;
+    opacity: 1;
+  }
+}
+
+#score {
+  font-size: 6rem;
+  text-align: center;
+  color: rgb(168, 168, 168);
+}
+
+@keyframes celebrationAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  will-change: transform, opacity;
+  animation: ascend 5s linear infinite;
+}
+
+.bubble:nth-child(odd) {
+  background: rgba(255, 0, 0, 0.5); /* Red */
+}
+
+.bubble:nth-child(even) {
+  background: rgba(0, 0, 255, 0.5); /* Blue */
+}
+
+.bubble:nth-child(3n) {
+  background: rgba(0, 255, 0, 0.5); /* Green */
+}
+
+.bubble:nth-child(4n) {
+  background: rgba(255, 255, 0, 0.5); /* Yellow */
+}
+
+.bubble:nth-child(5n) {
+  background: rgba(255, 0, 255, 0.5); /* Magenta */
+}
+
+/* Animation pour les étoiles */
+@keyframes star {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Styles pour les feux d'artifice en forme d'étoile */
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  will-change: transform, opacity;
+  animation: star 1s infinite linear;
+}
+/* Couleurs différentes pour les étoiles */
+.firework.gold {
+  background: gold;
+}
+
+.firework.silver {
+  background: silver;
+}
+
+.firework.red {
+  background: red;
+}
+
+.firework.blue {
+  background: blue;
+}
+
+.firework.green {
+  background: green;
+}
+@keyframes ascend {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes glitter {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #dc8d43;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}

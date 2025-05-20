@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  background-image: url("./img/th.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
+}
+
+/* Conteneur principal */
+.pokemon-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Image titre principal */
+.pokemon-title img {
+  width: 40%;
+}
+
+h1.pokemon-title {
+  margin: 0;
+  text-align: center;
+}
+#pokemon-image {
+  margin-bottom: 22px;
+  margin-top: -18px;
+}
+#pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Input Seach */
+.searh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input#searchInput {
+  width: 40%;
+  height: 5vh;
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #0e27cbc2, transparent 100px);
+  font-size: 2rem;
+  border: 2px solid yellow;
+  border-radius: 5px;
+  color: yellow;
+}
+input[type="text"]::placeholder {
+  color: #888;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+}
+#resetButton {
+  margin-top: 40px;
+  padding: 10px 50px;
+  font-size: 20px;
+  margin-left: 10px;
+  background-color: greenyellow;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#resetButton:hover {
+  background-color: green;
+}
+.pokemon-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.1);
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pokemon-number {
+  background-color: #2a75bb;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
